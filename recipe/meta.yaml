@@ -1,5 +1,5 @@
 {% set name = "jc" %}
-{% set version = "1.25.2" %}
+{% set version = "1.25.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jc-{{ version }}.tar.gz
-  sha256: 97ada193495f79550f06fe0cbfb119ff470bcca57c1cc593a5cdb0008720e0b3
+  sha256: fa3140ceda6cba1210d1362f363cd79a0514741e8a1dd6167db2b2e2d5f24f7b
 
 build:
   entry_points:
