@@ -1,13 +1,13 @@
 {% set name = "jc" %}
-{% set version = "1.25.3" %}
+{% set version = "1.25.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jc-{{ version }}.tar.gz
-  sha256: fa3140ceda6cba1210d1362f363cd79a0514741e8a1dd6167db2b2e2d5f24f7b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jc-{{ version }}.tar.gz
+  sha256: a32eaf029c56b582dadae48895f20784d0f84f2fa28a8e2b32f377a8bffa8b39
 
 build:
   entry_points:
@@ -19,13 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
   run:
     - pygments >=2.3.0
-    - python >=3.7
+    - python >={{ python_min }}
     - xmltodict >=0.12.0
-
-    # needs this but not listed
     - ruamel.yaml >=0.15.0
 
 test:
@@ -36,6 +35,7 @@ test:
     - jc --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/kellyjonbrazil/jc
