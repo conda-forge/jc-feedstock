@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: jc
-  version: "1.25.7"
+  version: "1.26.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/jc-${{ version }}.tar.gz
-  sha256: 63481e34d92715781e1b094eca7d76d122a14489463d45b7f3e8180f44ea3a10
+  sha256: 576b5615b5677c7bf4aacf97dcc6c6b4bf437bbc420c7db77b43ae1785372c9e
 
 build:
   number: 0
